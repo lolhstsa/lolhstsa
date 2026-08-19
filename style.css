@@ -463,3 +463,73 @@ footer {
     transform: rotateY(180deg); /* This side starts flipped away */
     color: white;
 }
+
+/* --- MOBILE RESPONSIVENESS (Phones & Tablets) --- */
+@media (max-width: 850px) {
+    /* 1. Stack the Header & Navigation */
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 0.95rem;
+    }
+
+    /* Make the join button full width so it's easy to tap */
+    .btn-join {
+        margin-top: 10px;
+        width: 100%; 
+    }
+
+    /* 2. Scale down the huge Hero text */
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* 3. Stack the Officer Accordion Vertically */
+    .officer-showcase {
+        flex-direction: column;
+        height: 80vh; 
+    }
+
+    .officer {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,.15);
+    }
+
+    .officer:first-child {
+        border-top: none;
+    }
+
+    /* Move the red accent bar to the top instead of the side */
+    .white-bar {
+        width: 100%;
+        height: 4px;
+    }
+
+    /* Flip the officer names so they are readable left-to-right */
+    .vertical-name {
+        transform: translate(-50%, -50%) rotate(0deg); 
+        letter-spacing: 2px;
+    }
+}
